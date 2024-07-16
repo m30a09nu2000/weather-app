@@ -1,0 +1,80 @@
+{
+  "homepage": "https://m30a09nu2000.github.io/weather-app",
+  
+
+  "name": "weatherapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-scripts": "5.0.1",
+    "sweetalert2": "^11.12.0",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --coverage",
+    "test:html": "jest --coverage --reporters=default jest-html-reporter",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs",
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|svg|avif)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "jest": "^27.5.1",
+    "jest-html-reporter": "^3.10.2",
+    "jest-html-reporters": "^3.1.6"
+  }
+}
